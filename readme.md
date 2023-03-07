@@ -14,7 +14,9 @@ We want to display a list of all NFL teams with their names and logos and be abl
 
 We will be using the ESPN API to get the team list.
 
-### WHAT YOU NEED TO DO
+
+<details><summary>WHAT YOU NEED TO DO</summary>
+
 
 1. Fetch the data using the getTeams request in api/getTeams.ts. Please Only use React API to fetch the data, not a third party library.
 
@@ -38,3 +40,6 @@ We will be using the ESPN API to get the team list.
 7. Add an error message if the api call fails (you can test it by changing the URL string in getTeams).
 
 8. Add a switch: If on, images should be shown, otherwise hide images in the list. Please use redux to store and change the switch state.
+
+</details>
+
