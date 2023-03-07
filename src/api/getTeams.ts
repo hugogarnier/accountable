@@ -1,3 +1,5 @@
+import { Alert } from 'react-native';
+
 import { Sport } from '../types/sport';
 import { LightTeam } from '../types/team';
 
@@ -7,13 +9,14 @@ type Response = {
 const getSports = async (): Promise<Response> => {
   try {
     const result = await fetch('http://site.api.espn.com/apis/site/v2/sports/football/nfl/teams');
-    const data = await result.json();
-    return data;
-  } catch (e) {
+    const { sports }: { sports: Response['sports'] } = await result.json();
+    return { sports };
+  } catch (error) {
+    Alert.alert('there was an error with the API');
     return { sports: [] };
   }
 };
-export const lightTeams = async (): Promise<LightTeam[]> => {
+export const computeLightTeams = async (): Promise<LightTeam[]> => {
   try {
     const { sports } = await getSports();
 

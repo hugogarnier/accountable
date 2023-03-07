@@ -1,5 +1,5 @@
 export const SWITCH_IMAGE = 'SWITCH_IMAGE';
-export const switchImage = (boolean: boolean) => ({
+export const switchImage = (bool: boolean) => ({
   type: SWITCH_IMAGE,
-  payload: boolean,
+  payload: bool,
 });
