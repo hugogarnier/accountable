@@ -50,7 +50,7 @@ export const Teams = () => {
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          marginBottom: 30,
+          marginVertical: 30,
         }}
       >
         <Input
