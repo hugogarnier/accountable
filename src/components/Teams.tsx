@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FlatList, Switch, View } from 'react-native';
+import { FlatList, Platform, Switch, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { computeLightTeams } from '../api/getTeams';
@@ -44,13 +44,14 @@ export const Teams = () => {
   };
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <View
         style={{
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          marginVertical: 30,
+          marginTop: (Platform.OS === 'android' && 60) || 0,
+          marginBottom: 30,
         }}
       >
         <Input
