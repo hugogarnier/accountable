@@ -1,9 +1,5 @@
-export const switchOn = () => ({
-  type: 'SHOW_IMAGES',
-  payload: true,
-});
-
-export const switchOff = () => ({
-  type: 'SHOW_IMAGES',
-  payload: false,
+export const SWITCH_IMAGE = 'SWITCH_IMAGE';
+export const switchImage = (boolean: boolean) => ({
+  type: SWITCH_IMAGE,
+  payload: boolean,
 });
